@@ -6,7 +6,7 @@
   <link href="http://safeoffellow.github.io/atom.xml" rel="self"/>
   
   <link href="http://safeoffellow.github.io/"/>
-  <updated>2021-08-09T02:07:47.698Z</updated>
+  <updated>2021-08-10T10:20:27.260Z</updated>
   <id>http://safeoffellow.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The First</title>
+    <link href="http://safeoffellow.github.io/2021/08/10/the-first/"/>
+    <id>http://safeoffellow.github.io/2021/08/10/the-first/</id>
+    <published>2021-08-10T08:21:16.000Z</published>
+    <updated>2021-08-10T10:20:27.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​    终于！两天终于把博客搭建好了，感谢&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Living" scheme="http://safeoffellow.github.io/categories/Living/"/>
+    
+    
+    <category term="blog" scheme="http://safeoffellow.github.io/tags/blog/"/>
+    
+    <category term="recarding" scheme="http://safeoffellow.github.io/tags/recarding/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
