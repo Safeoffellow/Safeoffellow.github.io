@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>【Opencv】动态背景下的目标跟踪识别</title>
+      <link href="/2021/081353946.html"/>
+      <url>/2021/081353946.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="【Opencv】动态背景下运动目标检测"><a href="#【Opencv】动态背景下运动目标检测" class="headerlink" title="【Opencv】动态背景下运动目标检测"></a>【Opencv】动态背景下运动目标检测</h1><h2 id="图像预处理"><a href="#图像预处理" class="headerlink" title="图像预处理"></a>图像预处理</h2><p>由于采集到的视频序列图像上<strong>通常会含有噪声</strong>，为了提高准确率需要在检测之前<strong>增强图像质量和消除图像噪声的预处理</strong>。</p><h3 id="图像增强"><a href="#图像增强" class="headerlink" title="图像增强"></a>图像增强</h3><ol><li>技术直接改善图像视觉效果</li><li>转换图像形式</li></ol><h2 id="运动目标检测算法"><a href="#运动目标检测算法" class="headerlink" title="运动目标检测算法"></a>运动目标检测算法</h2><h3 id="背景差分法"><a href="#背景差分法" class="headerlink" title="背景差分法"></a>背景差分法</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>利用输入的<strong>当前帧与预留的背景帧</strong>进行差分，对差分结果进行<strong>阈值分割</strong>，从而检测运动目标，获得运动目标估计区域。</p><h4 id="具体计算"><a href="#具体计算" class="headerlink" title="具体计算"></a>具体计算</h4><p>流程图如下：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108131741368.png" alt="P1 背景差分法流程图"></p><p>背景差分法的数学模型如下：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108131743112.png" alt="P2 背景差分法计算公式"></p><p>改进之处：</p><p>传统的背景差分法是将运动目标<strong>还未出现时采集的图像作为背景图像</strong>，但是因为场景中的光照变化、树叶扰动以及雨雪天气等干扰存在，也有可能运动目标在场景中由运动状态变为静止，被当成背景处理等因素，是得目标检测<strong>误差很大</strong>。为了使背景更新策略能够<strong>适应复杂场景</strong>，需要要求此背景更新策略能够随背景变化自适应地更新背景模型，提高准确率。<strong>中值模型、均值模型、单高斯模型、混合高斯模型</strong>等是目前主要的背景建模方法。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机视觉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The First</title>
       <link href="/2021/081029930.html"/>
       <url>/2021/081029930.html</url>
       
-        <content type="html"><![CDATA[<p>​    终于！两天终于把博客搭建好了，感谢<a href="https://www.bilibili.com/video/BV1Yb411a7ty">羊哥的教学视频</a>，视频十分详细，在手把手教学下完成了个人博客的初始搭建。</p><p>第一篇博客，我来总结一下，这几天获得的一些经验</p><h2 id="如何生成一篇博客"><a href="#如何生成一篇博客" class="headerlink" title="如何生成一篇博客"></a>如何生成一篇博客</h2><p>生成一篇博客：</p><ol><li>hexo n “博客名称”           ——创建一篇信的博客——markdown格式</li><li>找到生成的markdown文件所在位置并编辑它</li><li>hexo g                                ——生成你更改的配置</li><li>hexo s                                 ——启动博客，完成预览</li><li>hexo d                                 ——上传至我的github仓库</li></ol><p><strong>注：</strong>在出错或完成一次生成后，记得用hexo clean清理缓存再用hexo g生成。</p><ol start="6"><li><p>一篇博客的初始化设置</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111659036.png" alt="The First P1"></p></li></ol><h2 id="VPN的小教训"><a href="#VPN的小教训" class="headerlink" title="VPN的小教训"></a>VPN的小教训</h2><p>之前为了更快速进入github，下了一个vpn翻墙，电脑关机的时候，忘了退出vpn软件了，导致第二天开机时，wife网络一直连接失败。</p><p>在经过万能的百度搜索后，找到了解决方法；</p><ol><li><p>首先先打开Windows设置</p></li><li><p>然后点开 <strong>更新和安全</strong>，再点击其中的<strong>疑难解答</strong>，进入后点击<strong>其他疑难解答</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111708275.png" alt="The First P2"></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111709016.png" alt="The First P3"></p></li><li><p>然后点击进入<strong>Internet连接</strong>，进入Internet问题检查</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111710863.png" alt="The First P4"></p></li><li><p>检查后返回了这样的结果</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111711767.jpg" alt="The First P5"></p></li><li><p>搜索百度后，得知开启VPN的时候，打开了代理服务器，我们把它关掉就能正常上网了。先打开 <strong>“网络和Internet设置”</strong>，找到<strong>代理</strong>，<strong>关闭手动代理设置</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111712928.png" alt="The First P6"></p></li></ol><p>PS：唉，这网络搞了我两个小时，总结下来就是，<strong>翻墙有风险，用VPN需谨慎！</strong></p>]]></content>
+        <content type="html"><![CDATA[<p>​    终于！两天终于把博客搭建好了，感谢<a href="https://www.bilibili.com/video/BV1Yb411a7ty">羊哥的教学视频</a>，视频十分详细，在手把手教学下完成了个人博客的初始搭建。</p><p>第一篇博客，我来总结一下，这几天获得的一些经验</p><h2 id="如何生成一篇博客"><a href="#如何生成一篇博客" class="headerlink" title="如何生成一篇博客"></a>如何生成一篇博客</h2><p>生成一篇博客：</p><ol><li>hexo n “博客名称”           ——创建一篇信的博客——markdown格式</li><li>找到生成的markdown文件所在位置并编辑它</li><li>hexo g                                ——生成你更改的配置</li><li>hexo s                                 ——启动博客，完成预览</li><li>hexo d                                 ——上传至我的github仓库</li></ol><p><strong>注：</strong>在出错或完成一次生成后，记得用hexo clean清理缓存再用hexo g生成。</p><ol start="6"><li><p>一篇博客的初始化设置</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111659036.png" alt="The First P1"></p></li></ol><h2 id="VPN的小教训"><a href="#VPN的小教训" class="headerlink" title="VPN的小教训"></a>VPN的小教训</h2><p>之前为了更快速进入github，下了一个vpn翻墙，电脑关机的时候，忘了退出vpn软件了，导致第二天开机时，wife网络一直连接失败。</p><p>在经过万能的百度搜索后，找到了解决方法；</p><ol><li><p>首先先打开Windows设置</p></li><li><p>然后点开 <strong>更新和安全</strong>，再点击其中的<strong>疑难解答</strong>，进入后点击<strong>其他疑难解答</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111708275.png" alt="The First P2"></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111709016.png" alt="The First P3"></p></li><li><p>然后点击进入<strong>Internet连接</strong>，进入Internet问题检查</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111710863.png" alt="The First P4"></p></li><li><p>检查后返回了这样的结果</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111711767.jpg" alt="The First P5"></p></li><li><p>搜索百度后，得知开启VPN的时候，打开了代理服务器，我们把它关掉就能正常上网了。先打开 <strong>“网络和Internet设置”</strong>，找到<strong>代理</strong>，<strong>关闭手动代理设置</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108111712928.png" alt="The First P6"></p></li></ol><p>PS：唉，这网络搞了我两个小时，总结下来就是，<strong>翻墙有风险，用VPN需谨慎！</strong></p><h1 id="【Opencv】动态背景下运动目标检测"><a href="#【Opencv】动态背景下运动目标检测" class="headerlink" title="【Opencv】动态背景下运动目标检测"></a>【Opencv】动态背景下运动目标检测</h1><h2 id="图像预处理"><a href="#图像预处理" class="headerlink" title="图像预处理"></a>图像预处理</h2><p>由于采集到的视频序列图像上<strong>通常会含有噪声</strong>，为了提高准确率需要在检测之前<strong>增强图像质量和消除图像噪声的预处理</strong>。</p><h3 id="图像增强"><a href="#图像增强" class="headerlink" title="图像增强"></a>图像增强</h3><ol><li>技术直接改善图像视觉效果</li><li>转换图像形式</li></ol><h2 id="运动目标检测算法"><a href="#运动目标检测算法" class="headerlink" title="运动目标检测算法"></a>运动目标检测算法</h2><h3 id="背景差分法"><a href="#背景差分法" class="headerlink" title="背景差分法"></a>背景差分法</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>利用输入的<strong>当前帧与预留的背景帧</strong>进行差分，对差分结果进行<strong>阈值分割</strong>，从而检测运动目标，获得运动目标估计区域。</p><h4 id="具体计算"><a href="#具体计算" class="headerlink" title="具体计算"></a>具体计算</h4><p>流程图如下：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108131741368.png" alt="P1 背景差分法流程图"></p><p>背景差分法的数学模型如下：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108131743112.png" alt="P2 背景差分法计算公式"></p><p>改进之处：</p><p>传统的背景差分法是将运动目标<strong>还未出现时采集的图像作为背景图像</strong>，但是因为场景中的光照变化、树叶扰动以及雨雪天气等干扰存在，也有可能运动目标在场景中由运动状态变为静止，被当成背景处理等因素，是得目标检测<strong>误差很大</strong>。为了使背景更新策略能够<strong>适应复杂场景</strong>，需要要求此背景更新策略能够随背景变化自适应地更新背景模型，提高准确率。<strong>中值模型、均值模型、单高斯模型、混合高斯模型</strong>等是目前主要的背景建模方法。</p>]]></content>
       
       
       <categories>
