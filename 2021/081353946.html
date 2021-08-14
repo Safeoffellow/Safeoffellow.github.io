@@ -496,14 +496,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    341
+                    675
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -527,7 +527,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="【Opencv】动态背景下运动目标检测"><a href="#【Opencv】动态背景下运动目标检测" class="headerlink" title="【Opencv】动态背景下运动目标检测"></a>【Opencv】动态背景下运动目标检测</h1><h2 id="图像预处理"><a href="#图像预处理" class="headerlink" title="图像预处理"></a>图像预处理</h2><p>由于采集到的视频序列图像上<strong>通常会含有噪声</strong>，为了提高准确率需要在检测之前<strong>增强图像质量和消除图像噪声的预处理</strong>。</p>
-<h3 id="灰度化处理"><a href="#灰度化处理" class="headerlink" title="灰度化处理"></a>灰度化处理</h3><h2 id="运动目标检测算法"><a href="#运动目标检测算法" class="headerlink" title="运动目标检测算法"></a>运动目标检测算法</h2><h3 id="背景差分法"><a href="#背景差分法" class="headerlink" title="背景差分法"></a>背景差分法</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>利用输入的<strong>当前帧与预留的背景帧</strong>进行差分，对差分结果进行<strong>阈值分割</strong>，从而检测运动目标，获得运动目标估计区域。</p>
+<h3 id="一、灰度化处理"><a href="#一、灰度化处理" class="headerlink" title="一、灰度化处理"></a>一、灰度化处理</h3><h3 id="二、去噪处理"><a href="#二、去噪处理" class="headerlink" title="二、去噪处理"></a>二、去噪处理</h3><p>由于<strong>天气变化、光照变化、采集设备、图像数据传输、摄像机抖动等造成获得图像中夹杂着各种噪声</strong>，致使图像质量下降。因此去噪处理至关重要。图像去噪可采用<strong>傅里叶变换和低通滤波技术的频率域法</strong>。</p>
+<p>滤波操作时为了对图像进行初步的优化处理，滤波方法包括中值滤波、均值滤波等。</p>
+<h4 id="（1）均值滤波"><a href="#（1）均值滤波" class="headerlink" title="（1）均值滤波"></a>（1）均值滤波</h4><p>均值滤波是最简单的噪声消除方法。用某像素周围 n * n (n = 3, 5, 7，……) 像素范围的<strong>平均值代替该像素的方法</strong>。将均值滤波处理后的图像表示为 <strong>g(x, y)</strong> ， 其计算可由下式所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108141052143.png" alt="P1均值滤波计算公式"></p>
+<p>上式中，n定义为模板窗口中<strong>像素的数目</strong>。均值滤波对高斯噪声有很好的处理效果，但均值滤波<strong>会使图像模糊，特别是轮廓边缘不清晰</strong>。</p>
+<h4 id="（2）中值滤波"><a href="#（2）中值滤波" class="headerlink" title="（2）中值滤波"></a>（2）中值滤波</h4><p>中值滤波是指输出值取<strong>滤波器窗口内像素灰度值排列顺序</strong>的<strong>中间值</strong>的滤波器。具体处理过程，是选某一形状和尺寸大小的窗口模板，再利用窗口模板，对需要处理的图像进行窗口内像素值</p>
+<h2 id="运动目标检测算法"><a href="#运动目标检测算法" class="headerlink" title="运动目标检测算法"></a>运动目标检测算法</h2><h3 id="背景差分法"><a href="#背景差分法" class="headerlink" title="背景差分法"></a>背景差分法</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>利用输入的<strong>当前帧与预留的背景帧</strong>进行差分，对差分结果进行<strong>阈值分割</strong>，从而检测运动目标，获得运动目标估计区域。</p>
 <h4 id="具体计算"><a href="#具体计算" class="headerlink" title="具体计算"></a>具体计算</h4><p>流程图如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108131741368.png" alt="P1 背景差分法流程图"></p>
 <p>背景差分法的数学模型如下：</p>
