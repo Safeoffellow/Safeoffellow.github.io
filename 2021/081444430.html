@@ -38,7 +38,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161018250.png);
+       background-image: url(https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161032352.png);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -492,7 +492,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    283
+                    287
                 </div>
                 
 
@@ -526,6 +526,9 @@
 <p>光流法的原理是<strong>利用聚类法</strong>将<strong>运动矢量场分为前景和背景</strong>两类，从而得到运动目标。但光流法对<strong>噪声及光照变化敏感，且算法复杂，计算量大</strong>，不适合实时性要求高的场合。背景运动补偿差分法的原理是<strong>拍摄场景与摄像机相对运动</strong>引起的背景运动<strong>进行建模补偿</strong>，<strong>再进行差分</strong>得到运动目标。</p>
 <h2 id="二、背景运动补偿差分法"><a href="#二、背景运动补偿差分法" class="headerlink" title="二、背景运动补偿差分法"></a>二、背景运动补偿差分法</h2><p>背景运动补偿差分法首先通过<strong>匹配相邻帧的提取出来的特征</strong>，然后再将匹配的特征点<strong>代入建立的背景运动模型中求解出该模型参数</strong>，利用背景模型对参考帧做<strong>背景运动补偿再检测运动</strong>，使得运动目标与动态背景分离从而准确获得每个运动目标区域。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108141740904.png" alt="P2.1 动态背景下运动目标检测流程图"></p>
+<ol>
+<li>参数模型</li>
+</ol>
 
                 
             </div>
