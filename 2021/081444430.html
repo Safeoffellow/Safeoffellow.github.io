@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【Opencv】静态背景下的目标跟踪识别, Charlotte">
+    <meta name="keywords" content="Opencv 动态背景下的目标跟踪识别, Charlotte">
     <meta name="description" content="风行水上，自然成纹">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【Opencv】静态背景下的目标跟踪识别 | Charlotte</title>
+    <title>Opencv 动态背景下的目标跟踪识别 | Charlotte</title>
     <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161007288.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161008856.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【Opencv】静态背景下的目标跟踪识别</h1>
+                    <h1 class="description center-align post-title">Opencv 动态背景下的目标跟踪识别</h1>
                 </div>
             </div>
         </div>
@@ -455,13 +455,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">
-                                <span class="chip bg-color">计算机视觉</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -469,8 +465,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Study/" class="post-category">
-                                Study
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
+                                计算机视觉
                             </a>
                         
                     </div>
@@ -482,7 +478,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-13
+                    2021-08-14
                 </div>
                 
 
@@ -496,14 +492,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    675
+                    283
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -526,20 +522,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="【Opencv】静态背景下运动目标检测"><a href="#【Opencv】静态背景下运动目标检测" class="headerlink" title="【Opencv】静态背景下运动目标检测"></a>【Opencv】静态背景下运动目标检测</h1><h2 id="图像预处理"><a href="#图像预处理" class="headerlink" title="图像预处理"></a>图像预处理</h2><p>由于采集到的视频序列图像上<strong>通常会含有噪声</strong>，为了提高准确率需要在检测之前<strong>增强图像质量和消除图像噪声的预处理</strong>。</p>
-<h3 id="一、灰度化处理"><a href="#一、灰度化处理" class="headerlink" title="一、灰度化处理"></a>一、灰度化处理</h3><h3 id="二、去噪处理"><a href="#二、去噪处理" class="headerlink" title="二、去噪处理"></a>二、去噪处理</h3><p>由于<strong>天气变化、光照变化、采集设备、图像数据传输、摄像机抖动等造成获得图像中夹杂着各种噪声</strong>，致使图像质量下降。因此去噪处理至关重要。图像去噪可采用<strong>傅里叶变换和低通滤波技术的频率域法</strong>。</p>
-<p>滤波操作时为了对图像进行初步的优化处理，滤波方法包括中值滤波、均值滤波等。</p>
-<h4 id="（1）均值滤波"><a href="#（1）均值滤波" class="headerlink" title="（1）均值滤波"></a>（1）均值滤波</h4><p>均值滤波是最简单的噪声消除方法。用某像素周围 n * n (n = 3, 5, 7，……) 像素范围的<strong>平均值代替该像素的方法</strong>。将均值滤波处理后的图像表示为 <strong>g(x, y)</strong> ， 其计算可由下式所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161004373.png" alt="P1 均值滤波计算公式"></p>
-<p>上式中，n定义为模板窗口中<strong>像素的数目</strong>。均值滤波对高斯噪声有很好的处理效果，但均值滤波<strong>会使图像模糊，特别是轮廓边缘不清晰</strong>。</p>
-<h4 id="（2）中值滤波"><a href="#（2）中值滤波" class="headerlink" title="（2）中值滤波"></a>（2）中值滤波</h4><p>中值滤波是指输出值取<strong>滤波器窗口内像素灰度值排列顺序</strong>的<strong>中间值</strong>的滤波器。具体处理过程，是选某一形状和尺寸大小的窗口模板，再利用窗口模板，对需要处理的图像进行窗口内像素值</p>
-<h2 id="运动目标检测算法"><a href="#运动目标检测算法" class="headerlink" title="运动目标检测算法"></a>运动目标检测算法</h2><h3 id="背景差分法"><a href="#背景差分法" class="headerlink" title="背景差分法"></a>背景差分法</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>利用输入的<strong>当前帧与预留的背景帧</strong>进行差分，对差分结果进行<strong>阈值分割</strong>，从而检测运动目标，获得运动目标估计区域。</p>
-<h4 id="具体计算"><a href="#具体计算" class="headerlink" title="具体计算"></a>具体计算</h4><p>流程图如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161004478.png" alt="P1 背景差分法流程图"></p>
-<p>背景差分法的数学模型如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161005399.png" alt="P2 背景差分法计算公式"></p>
-<p>改进之处：</p>
-<p>传统的背景差分法是将运动目标<strong>还未出现时采集的图像作为背景图像</strong>，但是因为场景中的光照变化、树叶扰动以及雨雪天气等干扰存在，也有可能运动目标在场景中由运动状态变为静止，被当成背景处理等因素，是得目标检测<strong>误差很大</strong>。为了使背景更新策略能够<strong>适应复杂场景</strong>，需要要求此背景更新策略能够随背景变化自适应地更新背景模型，提高准确率。<strong>中值模型、均值模型、单高斯模型、混合高斯模型</strong>等是目前主要的背景建模方法。</p>
+                <h1 id="【Opencv】动态背景下运动目标检测"><a href="#【Opencv】动态背景下运动目标检测" class="headerlink" title="【Opencv】动态背景下运动目标检测"></a>【Opencv】动态背景下运动目标检测</h1><h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p>动态背景下的运动目标检测算法分为两类：一是光流法，二是背景运动补偿差分法。</p>
+<p>光流法的原理是<strong>利用聚类法</strong>将<strong>运动矢量场分为前景和背景</strong>两类，从而得到运动目标。但光流法对<strong>噪声及光照变化敏感，且算法复杂，计算量大</strong>，不适合实时性要求高的场合。背景运动补偿差分法的原理是<strong>拍摄场景与摄像机相对运动</strong>引起的背景运动<strong>进行建模补偿</strong>，<strong>再进行差分</strong>得到运动目标。</p>
+<h2 id="二、背景运动补偿差分法"><a href="#二、背景运动补偿差分法" class="headerlink" title="二、背景运动补偿差分法"></a>二、背景运动补偿差分法</h2><p>背景运动补偿差分法首先通过<strong>匹配相邻帧的提取出来的特征</strong>，然后再将匹配的特征点<strong>代入建立的背景运动模型中求解出该模型参数</strong>，利用背景模型对参考帧做<strong>背景运动补偿再检测运动</strong>，使得运动目标与动态背景分离从而准确获得每个运动目标区域。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108141740904.png" alt="P2.1 动态背景下运动目标检测流程图"></p>
 
                 
             </div>
@@ -566,7 +552,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Safeoffellow.github.io/2021/081353946.html">http://Safeoffellow.github.io/2021/081353946.html</a>
+                    <a href="http://Safeoffellow.github.io/2021/081444430.html">http://Safeoffellow.github.io/2021/081444430.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,11 +589,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">
-                                    <span class="chip bg-color">计算机视觉</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -917,9 +899,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/081444430.html">
                     <div class="card-image">
@@ -936,9 +919,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -951,6 +934,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -961,30 +945,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/081029930.html">
+                <a href="/2021/081353946.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Safeoffellow.github.io/img/202108121521224.png" class="responsive-img" alt="The First">
+                        <img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-Image/image/202108161007288.png" class="responsive-img" alt="【Opencv】静态背景下的目标跟踪识别">
                         
-                        <span class="card-title">The First</span>
+                        <span class="card-title">【Opencv】静态背景下的目标跟踪识别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是我的第一篇博客，可能写的不太好，但我希望我能一直坚持写下去，记录下我生活中的点点滴滴
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Living/" class="post-category">
-                                    Living
+                            <a href="/categories/Study/" class="post-category">
+                                    Study
                                 </a>
                             
                             
@@ -994,12 +978,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                    <a href="/tags/recording/">
-                        <span class="chip bg-color">recording</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">
+                        <span class="chip bg-color">计算机视觉</span>
                     </a>
                     
                 </div>
