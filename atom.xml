@@ -6,7 +6,7 @@
   <link href="http://safeoffellow.github.io/atom.xml" rel="self"/>
   
   <link href="http://safeoffellow.github.io/"/>
-  <updated>2021-08-16T02:42:20.274Z</updated>
+  <updated>2021-08-17T08:52:06.052Z</updated>
   <id>http://safeoffellow.github.io/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《操作系统真象还原笔记》</title>
+    <link href="http://safeoffellow.github.io/2021/081764532.html"/>
+    <id>http://safeoffellow.github.io/2021/081764532.html</id>
+    <published>2021-08-17T08:44:15.000Z</published>
+    <updated>2021-08-17T08:52:06.052Z</updated>
+    
+    
+    
+    
+    <category term="study" scheme="http://safeoffellow.github.io/categories/study/"/>
+    
+    
+    <category term="操作系统" scheme="http://safeoffellow.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Opencv 动态背景下的目标跟踪识别</title>
     <link href="http://safeoffellow.github.io/2021/081444430.html"/>
     <id>http://safeoffellow.github.io/2021/081444430.html</id>
     <published>2021-08-14T09:17:53.000Z</published>
-    <updated>2021-08-16T02:42:20.274Z</updated>
+    <updated>2021-08-17T08:46:44.173Z</updated>
     
     
       
@@ -34,8 +51,10 @@
     
     
     
-    <category term="计算机视觉" scheme="http://safeoffellow.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    <category term="study" scheme="http://safeoffellow.github.io/categories/study/"/>
     
+    
+    <category term="-计算机视觉" scheme="http://safeoffellow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
   </entry>
   
