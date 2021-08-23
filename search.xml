@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>齐次坐标系“</title>
+      <link href="/2021/082362855.html"/>
+      <url>/2021/082362855.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于齐次坐标系的理解"><a href="#关于齐次坐标系的理解" class="headerlink" title="关于齐次坐标系的理解"></a>关于齐次坐标系的理解</h1><h2 id="序言：两条平行线可以相交于一点"><a href="#序言：两条平行线可以相交于一点" class="headerlink" title="序言：两条平行线可以相交于一点"></a>序言：两条平行线可以相交于一点</h2><p>在<strong>欧氏几何空间</strong>，同一平面的两条平行线<strong>不能相交</strong>。</p><p>但在<strong>透视空间</strong>里，两条平行线<strong>可以相交</strong>，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。</p><p>欧氏空间（or笛卡尔坐标系）描述2D/3D几何非常合适，但不适合处理透视空间的问题（事实上，<strong>欧氏几何是透视几何的一个子集合</strong>），2维笛卡尔坐标系可以表示为（x，y）。</p><p>若一个点在无穷远处，这个点的坐标为（∞，∞）。平行线在透视空间的无穷远处交于一点，但在<strong>欧氏空间却不能</strong>。</p><h2 id="方法：齐次坐标系"><a href="#方法：齐次坐标系" class="headerlink" title="方法：齐次坐标系"></a>方法：齐次坐标系</h2><p>定义：齐次坐标就是用N+1维来表示N维坐标</p><p>即在一个2D笛卡尔坐标末尾加上一个<strong>额外的变量w</strong>来形成2D齐次坐标，因此，一个点（X，Y）在齐次坐标里面变成了（x, y, w），并且有</p><p><code>X = x/w</code></p><p><code>Y = y/w</code></p><p>例如，笛卡尔坐标系下（1， 2）的齐次坐标系可以表示为（1， 2， 1），如果或点（1，2）移动到无限远处。</p><p>笛卡尔坐标系下它为（∞，∞）</p><p>它的齐次坐标系为（1， 2， 0），因为（1/0, 2/0） = （∞， ∞），因此可以不用∞来表示一个无穷远处的点了。</p><h2 id="来由：为什么叫齐次坐标系"><a href="#来由：为什么叫齐次坐标系" class="headerlink" title="来由：为什么叫齐次坐标系"></a>来由：为什么叫齐次坐标系</h2><p>把齐次坐标转化为笛卡尔坐标的方法是<strong>前面n-1坐标分量分别除以最后一个分量</strong>即可。如图：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-image/image/202108231124829.png" alt="P1 齐次坐标与笛卡尔坐标转换 "></p><p>在转换中，会发现一个特性：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-image/image/202108231126653.png" alt="P2 特殊转换"></p><p>你会发现(1, 2, 3), (2, 4, 6) 和(4, 8, 12)对应同一个笛卡尔坐标系点 (1/3, 2/3)，<strong>任何标量的乘积</strong>，例如**(1a, 2a, 3a)** 对应 笛卡尔空间里面的(1/3, 2/3) 。</p><p>因此，这些点是“<strong>齐次的</strong>”，因为他们<strong>代表了笛卡尔坐标系里面的同一个点</strong>。换句话说，齐次坐标有<strong>规模不变性</strong>。</p><h2 id="证明：两条直线可以相交"><a href="#证明：两条直线可以相交" class="headerlink" title="证明：两条直线可以相交"></a>证明：两条直线可以相交</h2><p>有如下方程组：</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-image/image/202108231129254.png" alt="P3 方程组"></p><p>在笛卡尔坐标系中，该方程无解，因为C≠D，如果C=D，就为同一条直线。</p><p>在透视空间里，用齐次坐标x/w, y/w代替x, y</p><p><img src="https://cdn.jsdelivr.net/gh/Safeoffellow/Hexo-image/image/202108231132946.png" alt="P4 坐标转换"></p><p>因此，现在有一个解（x, y, 0 ），两条直线相交于(x, y, 0)， 这个点在无穷远处。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机视觉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>描述和匹配兴趣点</title>
+      <link href="/2021/081947708.html"/>
+      <url>/2021/081947708.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="检查兴趣点"><a href="#检查兴趣点" class="headerlink" title="检查兴趣点"></a>检查兴趣点</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>计算机视觉领域，<strong>兴趣点</strong>（也称关键点和特征点）的概念已经运用到了目标识别、图像配准、视觉跟踪、三维重建等。</p><p>原理：从图像中选取某些特征点并对图像进行局部分析（即提取局部特征），而非观察整幅图像（即提取全局特征）。</p><h1 id="描述和匹配兴趣点"><a href="#描述和匹配兴趣点" class="headerlink" title="描述和匹配兴趣点"></a>描述和匹配兴趣点</h1><h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><p>每一个关键点都具有<strong>足够的独特性</strong>：如果一个物体在一幅图像中被检测到关键点，那么<strong>同一个物体</strong>在<strong>其他图像</strong>中也会检测到<strong>同一个关键点</strong>。而且一些<strong>复杂的兴趣点检测器</strong>可以在关键点上设置<strong>缩放因子和方向</strong>等。</p><p>为了进行基于兴趣点的图像分析，需要构建多种表征方式，精确地描述每个关键点。而<strong>描述子</strong>就是用来描述关键点的重要数据。</p><p>描述子描述了一个<strong>关键点和它的邻域</strong>，好的描述子要具有足够的<strong>独特性</strong>，能<strong>唯一</strong>地表示图像中的每个关键点。</p><h2 id="局部模板匹配"><a href="#局部模板匹配" class="headerlink" title="局部模板匹配"></a>局部模板匹配</h2><p>通过特征点匹配，可以将一幅图像的点集和另一幅图像（或一批图像）的点集关联起来。如果两个点集对应着现实世界中的同一个场景元素，它们就应该是匹配的。</p><p>单凭当个像素判断两个关键点的相似度肯定不够，因此要在匹配过程中考虑每个关键点<strong>周围的图像块（邻域）</strong></p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>最常见的图像块是边长为<strong>奇数的正方形</strong>，关键点的位置是<strong>正方形的中心</strong>。通过比较块内像素强度值来衡量两个正方形图像块的相似度。常见的方案是采用差的平方和（Sum of Squared Differences, SSD）算法。</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//定义特征检测器cv::Ptr&lt;cv::FeatureDetector&gt; ptrDetector;ptrDetector = cv::FastFeatureDetector::create(80);//检测关键点ptrDetector-&gt;detect(image1, keypoints1);ptrDetector-&gt;detect(image2, keypoints2);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机视觉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《操作系统真象还原笔记》</title>
       <link href="/2021/081764532.html"/>
       <url>/2021/081764532.html</url>

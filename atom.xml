@@ -6,7 +6,7 @@
   <link href="http://safeoffellow.github.io/atom.xml" rel="self"/>
   
   <link href="http://safeoffellow.github.io/"/>
-  <updated>2021-08-17T08:52:06.052Z</updated>
+  <updated>2021-08-23T03:36:45.810Z</updated>
   <id>http://safeoffellow.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>齐次坐标系“</title>
+    <link href="http://safeoffellow.github.io/2021/082362855.html"/>
+    <id>http://safeoffellow.github.io/2021/082362855.html</id>
+    <published>2021-08-23T02:57:40.000Z</published>
+    <updated>2021-08-23T03:36:45.810Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;关于齐次坐标系的理解&quot;&gt;&lt;a href=&quot;#关于齐次坐标系的理解&quot; class=&quot;headerlink&quot; title=&quot;关于齐次坐标系的理解&quot;&gt;&lt;/a&gt;关于齐次坐标系的理解&lt;/h1&gt;&lt;h2 id=&quot;序言：两条平行线可以相交于一点&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Study" scheme="http://safeoffellow.github.io/categories/Study/"/>
+    
+    
+    <category term="计算机视觉" scheme="http://safeoffellow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>描述和匹配兴趣点</title>
+    <link href="http://safeoffellow.github.io/2021/081947708.html"/>
+    <id>http://safeoffellow.github.io/2021/081947708.html</id>
+    <published>2021-08-19T09:41:03.000Z</published>
+    <updated>2021-08-23T03:36:57.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;检查兴趣点&quot;&gt;&lt;a href=&quot;#检查兴趣点&quot; class=&quot;headerlink&quot; title=&quot;检查兴趣点&quot;&gt;&lt;/a&gt;检查兴趣点&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Study" scheme="http://safeoffellow.github.io/categories/Study/"/>
+    
+    
+    <category term="计算机视觉" scheme="http://safeoffellow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+  </entry>
   
   <entry>
     <title>《操作系统真象还原笔记》</title>
