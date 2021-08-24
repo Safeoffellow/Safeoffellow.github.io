@@ -511,14 +511,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-23
+                    2021-08-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    418
                 </div>
                 
 
@@ -540,58 +540,25 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="检查兴趣点"><a href="#检查兴趣点" class="headerlink" title="检查兴趣点"></a>检查兴趣点</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>计算机视觉领域，<strong>兴趣点</strong>（也称关键点和特征点）的概念已经运用到了目标识别、图像配准、视觉跟踪、三维重建等。</p>
-<p>原理：从图像中选取某些特征点并对图像进行局部分析（即提取局部特征），而非观察整幅图像（即提取全局特征）。</p>
-<h1 id="描述和匹配兴趣点"><a href="#描述和匹配兴趣点" class="headerlink" title="描述和匹配兴趣点"></a>描述和匹配兴趣点</h1><h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><p>每一个关键点都具有<strong>足够的独特性</strong>：如果一个物体在一幅图像中被检测到关键点，那么<strong>同一个物体</strong>在<strong>其他图像</strong>中也会检测到<strong>同一个关键点</strong>。而且一些<strong>复杂的兴趣点检测器</strong>可以在关键点上设置<strong>缩放因子和方向</strong>等。</p>
+                <h1 id="描述和匹配兴趣点"><a href="#描述和匹配兴趣点" class="headerlink" title="描述和匹配兴趣点"></a>描述和匹配兴趣点</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>每一个关键点都具有<strong>足够的独特性</strong>：如果一个物体在一幅图像中被检测到关键点，那么<strong>同一个物体</strong>在<strong>其他图像</strong>中也会检测到<strong>同一个关键点</strong>。而且一些<strong>复杂的兴趣点检测器</strong>可以在关键点上设置<strong>缩放因子和方向</strong>等。</p>
 <p>为了进行基于兴趣点的图像分析，需要构建多种表征方式，精确地描述每个关键点。而<strong>描述子</strong>就是用来描述关键点的重要数据。</p>
 <p>描述子描述了一个<strong>关键点和它的邻域</strong>，好的描述子要具有足够的<strong>独特性</strong>，能<strong>唯一</strong>地表示图像中的每个关键点。</p>
 <h2 id="局部模板匹配"><a href="#局部模板匹配" class="headerlink" title="局部模板匹配"></a>局部模板匹配</h2><p>通过特征点匹配，可以将一幅图像的点集和另一幅图像（或一批图像）的点集关联起来。如果两个点集对应着现实世界中的同一个场景元素，它们就应该是匹配的。</p>
 <p>单凭当个像素判断两个关键点的相似度肯定不够，因此要在匹配过程中考虑每个关键点<strong>周围的图像块（邻域）</strong></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>最常见的图像块是边长为<strong>奇数的正方形</strong>，关键点的位置是<strong>正方形的中心</strong>。通过比较块内像素强度值来衡量两个正方形图像块的相似度。常见的方案是采用差的平方和（Sum of Squared Differences, SSD）算法。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//定义特征检测器
-cv::Ptr&lt;cv::FeatureDetector&gt; ptrDetector;
+<pre class=" language-c++"><code class="language-c++">//定义特征检测器
+cv::Ptr<cv::FeatureDetector> ptrDetector;
 ptrDetector = cv::FastFeatureDetector::create(80);
 
 //检测关键点
-ptrDetector-&gt;detect(image1, keypoints1);
-ptrDetector-&gt;detect(image2, keypoints2);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ptrDetector->detect(image1, keypoints1);
+ptrDetector->detect(image2, keypoints2);
+</code></pre>
 
                 
             </div>
@@ -1086,6 +1053,14 @@ ptrDetector-&gt;detect(image2, keypoints2);<span aria-hidden="true" class="line-
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
 
 
     </div>
