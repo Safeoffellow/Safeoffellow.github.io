@@ -590,7 +590,7 @@ cv::cornerHarris(image, // 输入图像
 
 // 对角点强度阈值化
 cv::Mat harrisCorners; 
-double threshold= 0.0001; 
+double threshold = 0.0001; 
 cv::threshold(cornerStrength,harrisCorners, 
  threshold,255,cv::THRESH_BINARY);
 </code></pre>
