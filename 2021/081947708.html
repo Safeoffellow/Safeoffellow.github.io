@@ -548,14 +548,14 @@
                 <h1 id="描述和匹配兴趣点"><a href="#描述和匹配兴趣点" class="headerlink" title="描述和匹配兴趣点"></a>描述和匹配兴趣点</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>每一个关键点都具有<strong>足够的独特性</strong>：如果一个物体在一幅图像中被检测到关键点，那么<strong>同一个物体</strong>在<strong>其他图像</strong>中也会检测到<strong>同一个关键点</strong>。而且一些<strong>复杂的兴趣点检测器</strong>可以在关键点上设置<strong>缩放因子和方向</strong>等。</p>
 <p>为了进行基于兴趣点的图像分析，需要构建多种表征方式，精确地描述每个关键点。而<strong>描述子</strong>就是用来描述关键点的重要数据。</p>
 <p>描述子描述了一个<strong>关键点和它的邻域</strong>，好的描述子要具有足够的<strong>独特性</strong>，能<strong>唯一</strong>地表示图像中的每个关键点。</p>
-<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><h4 id="DMatch"><a href="#DMatch" class="headerlink" title="DMatch"></a>DMatch</h4><p>DMatch数据结构本质上包含两个索引</p>
+<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><h3 id="DMatch"><a href="#DMatch" class="headerlink" title="DMatch"></a>DMatch</h3><p>DMatch数据结构本质上包含两个索引</p>
 <p>第一个索引指向<strong>第一个关键点向量中的元素</strong></p>
 <p>第二个索引指向第二个<strong>关键点向量中匹配上的特征点</strong>。</p>
 <p>还包含一个数值，表示两个已匹配的描述子<strong>之间的差距</strong>。运算符 &lt; 可以用于比较两个 cv::DMatch实例。</p>
-<h4 id="matchTemplate"><a href="#matchTemplate" class="headerlink" title="matchTemplate"></a>matchTemplate</h4><p>图像分析中，一个常见的任务是检测图像中<strong>是否存在特定的图案或物体</strong>。</p>
+<h3 id="matchTemplate"><a href="#matchTemplate" class="headerlink" title="matchTemplate"></a>matchTemplate</h3><p>图像分析中，一个常见的任务是检测图像中<strong>是否存在特定的图案或物体</strong>。</p>
 <p>实现方法是把<strong>包含该物体的小图像作为模板</strong>，然后<strong>指定图像上搜索与模板相似的部分</strong>。搜索的范围通常仅限于可能发现该物体的区域</p>
 <p>在这个区域上滑动模板，并在每个像素位置计算相似度。</p>
-<h4 id="drawMatches"><a href="#drawMatches" class="headerlink" title="drawMatches"></a>drawMatches</h4><p>该函数能把两幅图像拼接起来，然后用线条连接每个对应的点。</p>
+<h3 id="drawMatches"><a href="#drawMatches" class="headerlink" title="drawMatches"></a>drawMatches</h3><p>该函数能把两幅图像拼接起来，然后用线条连接每个对应的点。</p>
 <pre class=" language-c++"><code class="language-c++">// 画出匹配结果
 cv::Mat matchImage; 
 cv::drawMatches(image1,keypoints1, // 第一幅图像
@@ -1603,9 +1603,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/live2d-widget-model-tororo/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":20,"vOffset":30},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/live2d-widget-model-tororo/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":20,"vOffset":30},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 
 </html>
